@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Intersection Observer for Scroll Reveals
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
-  
+
   const revealOptions = {
     threshold: 0.15,
     rootMargin: "0px 0px -50px 0px"

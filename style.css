@@ -1197,8 +1197,40 @@ ul {
   .form-grid { grid-template-columns: 1fr; }
   .checkbox-grid { grid-template-columns: repeat(2, 1fr); }
   
-  .team-card { height: auto; }
-  .card-expand { opacity: 1; transform: translateY(0); max-height: none; }
+  /* Tap-to-expand Team Cards */
+  .team-card { height: 200px; } /* Keep collapsed default */
+
+  /* Neutralize desktop hover on mobile touch */
+  .team-card:hover {
+    height: 200px;
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    background-color: var(--bg-paper);
+  }
+  .team-card:hover .card-front {
+    transform: none;
+  }
+  .team-card:hover .card-expand {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+
+  /* Exclusively expand when tapped (active class) */
+  .team-card.active {
+    height: 480px; 
+    background-color: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  }
+  .team-card.active .card-front {
+    transform: translateY(-10px);
+  }
+  .team-card.active .card-expand {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 400px;
+  }
+
   .ferris-wheel-container { opacity: 0.3; }
   .tents-container { opacity: 0.5; }
 }

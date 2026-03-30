@@ -52,6 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Tap-to-expand mobile team cards
+  const teamCards = document.querySelectorAll('.team-card');
+  teamCards.forEach(card => {
+    card.addEventListener('click', () => {
+      // Only apply tap logic strictly on mobile widths
+      if (window.innerWidth < 768) {
+        if (card.classList.contains('active')) {
+          card.classList.remove('active');
+        } else {
+          // Collapse any other previously open cards
+          teamCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+        }
+      }
+    });
+  });
+
   // Intersection Observer for Scroll Reveals
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIC Open Trials 2026</title>
+  <meta name="description"
+    content="Register for the IIC Open Trials 2026. Join our diverse teams: Tech, PR, Design and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-text">IIC TRIAL<span class="highlight">S</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-item active">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#teams" class="nav-item">Teams</a></li>
+        <li><a href="#events" class="nav-item">Events</a></li>
+        <li><a href="/register.html" class="btn-nav">Register</a></li>
+        <div class="nav-underline"></div>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="sky-gradient"></div>
+
+      <!-- Subtle Fireworks -->
+      <div class="fireworks-container">
+        <div class="fw fw-1"></div>
+        <div class="fw fw-2"></div>
+        <div class="fw fw-3"></div>
+      </div>
+
+      <!-- Giant Wheel -->
+      <div class="ferris-wheel-container">
+        <svg class="ferris-wheel" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" stroke="#E1C699" stroke-width="4" fill="none" />
+          <circle cx="100" cy="100" r="72" stroke="#E1C699" stroke-width="2" stroke-dasharray="6,6" fill="none" />
+          <circle cx="100" cy="100" r="15" fill="#D95B5B" />
+          <!-- Spokes -->
+          <g stroke="#E1C699" stroke-width="2">
+            <line x1="100" y1="20" x2="100" y2="180" />
+            <line x1="20" y1="100" x2="180" y2="100" />
+            <line x1="43.4" y1="43.4" x2="156.6" y2="156.6" />
+            <line x1="43.4" y1="156.6" x2="156.6" y2="43.4" />
+            <line x1="69.4" y1="26" x2="130.6" y2="174" />
+            <line x1="130.6" y1="26" x2="69.4" y2="174" />
+            <line x1="26" y1="69.4" x2="174" y2="130.6" />
+            <line x1="26" y1="130.6" x2="174" y2="69.4" />
+          </g>
+          <!-- Capsules (These rotate counter to the wheel via CSS to stay upright) -->
+          <g class="capsules">
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#699C94" class="capsule"
+              transform="rotate(0, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#D95B5B" class="capsule"
+              transform="rotate(45, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#FFECA1" class="capsule"
+              transform="rotate(90, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#699C94" class="capsule"
+              transform="rotate(135, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#D95B5B" class="capsule"
+              transform="rotate(180, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#FFECA1" class="capsule"
+              transform="rotate(225, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#699C94" class="capsule"
+              transform="rotate(270, 100, 100)" />
+            <rect x="92" y="10" width="16" height="20" rx="4" fill="#D95B5B" class="capsule"
+              transform="rotate(315, 100, 100)" />
+          </g>
+          <!-- Base -->
+          <path d="M 80 200 L 100 100 L 120 200 Z" fill="#E1C699" opacity="0.8" />
+        </svg>
+      </div>
+
+      <!-- Tents -->
+      <div class="tents-container">
+        <!-- Big Tent -->
+        <div class="tent tent-main">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 100 0 L 0 100 L 20 150 L 180 150 L 200 100 Z" fill="#D95B5B" />
+            <path d="M 100 0 L 40 100 L 160 100 Z" fill="#FFECA1" />
+            <path d="M 60 100 L 60 150 L 140 150 L 140 100 Z" fill="#D95B5B" />
+            <path d="M 80 100 L 80 150 L 120 150 L 120 100 Z" fill="#2D2926" opacity="0.3" /> <!-- Door -->
+            <polygon points="100,0 80,-20 100,-40" fill="#E1C699" class="flag" />
+          </svg>
+        </div>
+        <!-- Side Tent Left -->
+        <div class="tent tent-side-l">
+          <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 50 10 L 10 50 L 20 80 L 80 80 L 90 50 Z" fill="#699C94" />
+            <path d="M 50 10 L 30 50 L 70 50 Z" fill="#FFECA1" />
+            <polygon points="50,10 40,0 50,-10" fill="#D95B5B" class="flag" />
+          </svg>
+        </div>
+        <!-- Side Tent Right -->
+        <div class="tent tent-side-r">
+          <svg viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 60 10 L 10 60 L 20 90 L 100 90 L 110 60 Z" fill="#E1C699" />
+            <path d="M 60 10 L 35 60 L 85 60 Z" fill="#D95B5B" />
+            <polygon points="60,10 70,0 60,-10" fill="#699C94" class="flag" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Crowd Silhouettes -->
+      <div class="crowd"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content fade-in-up delay-3s">
+      <h1 class="hero-title">IIC Open Trials</h1>
+      <h2 class="hero-subtitle">7th – 9th April 2026</h2>
+      <a href="/register.html" class="btn-primary animate-hover">Register Now</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <a href="#teams">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="arrow-bounce">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- TEAMS SECTION -->
+  <section id="teams" class="teams section-pad reveal-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Join the <span class="highlight">Crew</span></h2>
+        <p class="section-desc">Pick your stall. Choose your game. Step right up.</p>
+      </div>
+
+      <div class="teams-grid">
+
+        <!-- Social Media -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">📱</span>
+            <h3>Social Media</h3>
+          </div>
+          <div class="card-expand">
+            <p>Tell the story of the grandest carnival in town.</p>
+            <ul class="roles-list">
+              <li>Create Instagram posts & reels</li>
+              <li>Write captions & hashtags</li>
+              <li>Cover events (photo/video)</li>
+              <li>Edit reels & highlights</li>
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- PR Team -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">🤝</span>
+            <h3>PR Team</h3>
+          </div>
+          <div class="card-expand">
+            <p>Bridge the gap between the audience and the magic.</p>
+            <ul class="roles-list">
+              <li>Promote events across campus</li>
+              <li>Handle announcements & outreach</li>
+              <li>Coordinate with other clubs</li>
+              <li>Manage collaborations</li>
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Tech Team -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">💻</span>
+            <h3>Tech Team</h3>
+          </div>
+          <div class="card-expand">
+            <p>Architect the digital backbone of the show.</p>
+            <ul class="roles-list">
+              <li>Build and maintain event websites</li>
+              <li>Handle registration systems & forms</li>
+              <li>Manage technical setup during events</li>
+              <li>Solve on-spot tech issues</li>
+
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Sponsor Team -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">💰</span>
+            <h3>Sponsor Team</h3>
+          </div>
+          <div class="card-expand">
+            <p>Fuel the spectacle and build vital connections.</p>
+            <ul class="roles-list">
+              <li>Reach out to potential sponsors</li>
+              <li>Create sponsor pitch decks</li>
+              <li>Communicate with brands</li>
+              <li>Explain sponsorship benefits</li>
+
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Event Team -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">🎪</span>
+            <h3>Event Team</h3>
+          </div>
+          <div class="card-expand">
+            <p>Orchestrate chaos into a breathtaking spectacle.</p>
+            <ul class="roles-list">
+              <li>Plan event concepts & activities</li>
+              <li>Create event timelines</li>
+              <li>Handle decorations & theme setup</li>
+              <li>Manage stage & venue design</li>
+
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Design Team -->
+        <div class="team-card stall-paper">
+          <div class="card-front">
+            <span class="card-icon">🎨</span>
+            <h3>Design Team</h3>
+          </div>
+          <div class="card-expand">
+            <p>Craft the visual identity of the grand carnival.</p>
+            <ul class="roles-list">
+              <li>Design posters & creatives</li>
+              <li>Create Instagram carousels</li>
+              <li>Design banners & standees</li>
+              <li>Create digital assets for social media</li>
+
+            </ul>
+            <a href="/register.html" class="btn-secondary">Apply Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS SECTION -->
+  <section id="events" class="events section-pad reveal-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">The Main <span class="highlight">Attractions</span></h2>
+        <p class="section-desc">Prove your mettle in our premier arenas.</p>
+      </div>
+
+      <div class="events-layout">
+        
+        <!-- Carousel Clash -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-design">Design</span>
+            <h3>Carousel Clash</h3>
+            <p class="hero-line">Design. Align. Make it shine.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Size: Instagram 4:5</li>
+                <li>Format: 1 row × 3 columns carousel</li>
+                <li>Theme shared at start</li>
+                <li>Submit PNG/PDF + editable link</li>
+                <li>Individual participation only</li>
+                <li>Late submission not accepted</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Sprint -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-social">Social</span>
+            <h3>Social Sprint</h3>
+            <p class="hero-line">Create content that stops the scroll.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Mode: Online submission</li>
+                <li>Choose one category</li>
+                <li>Content must be original</li>
+                <li>Video editing uses provided clips</li>
+                <li>Follow given theme</li>
+                <li>Submit before deadline</li>
+                <li>Individual participation only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Arena -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-tech">Tech</span>
+            <h3>Tech Arena</h3>
+            <p class="hero-line">Think smart. Build fast. Solve better.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Solve given problem / idea</li>
+                <li>Any tech stack allowed</li>
+                <li>Submit explanation or demo</li>
+                <li>Must be your own work</li>
+                <li>Individual participation only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pitch Deck Battle -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-sponsor">Sponsor</span>
+            <h3>Pitch Deck Battle</h3>
+            <p class="hero-line">Pitch bold. Win sponsors.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Max 5 slides pitch deck</li>
+                <li>Choose any brand</li>
+                <li>Include sponsor benefits</li>
+                <li>Submit presentation link</li>
+                <li>Individual participation only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PR Showdown -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-pr">PR</span>
+            <h3>PR Showdown</h3>
+            <p class="hero-line">Promote louder. Reach wider.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Create promotion strategy</li>
+                <li>Include outreach plan</li>
+                <li>Write announcement copy</li>
+                <li>Submit document link</li>
+                <li>Individual participation only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Blitz -->
+        <div class="event-card">
+          <div class="card-visible">
+            <span class="badge badge-event">Event</span>
+            <h3>Event Blitz</h3>
+            <p class="hero-line">Plan it. Run it. Own it.</p>
+          </div>
+          <div class="card-rules-wrapper">
+            <div class="card-rules">
+              <h4>Rules:</h4>
+              <ul>
+                <li>Plan one college event</li>
+                <li>Include budget & timeline</li>
+                <li>Define roles & execution</li>
+                <li>Submit document link</li>
+                <li>Individual participation only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTION PROCESS SECTION -->
+  <section id="process" class="process section-pad">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">Selection <span class="highlight">Process</span></h2>
+        <p class="section-desc">The path to joining the grand carnival.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Step 1 -->
+        <div class="timeline-step reveal-on-scroll delay-1">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card stall-paper">
+            <div class="step-header">
+              <span class="step-icon">🎟</span>
+              <h3>Registration</h3>
+            </div>
+            <ul>
+              <li>Apply for your preferred team through the registration form.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step reveal-on-scroll delay-2">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card stall-paper">
+            <div class="step-header">
+              <span class="step-icon">🎯</span>
+              <h3>Competition / Task</h3>
+            </div>
+            <ul>
+              <li>Participate in your team-specific challenge and submit your work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step reveal-on-scroll delay-3">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card stall-paper">
+            <div class="step-header">
+              <span class="step-icon">📋</span>
+              <h3>Shortlisting</h3>
+            </div>
+            <ul>
+              <li>Top entries will be shortlisted based on creativity, effort, and quality.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step reveal-on-scroll delay-4">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card stall-paper">
+            <div class="step-header">
+              <span class="step-icon">🎤</span>
+              <h3>Final Interview</h3>
+            </div>
+            <ul>
+              <li>Shortlisted candidates will attend a one-on-one interview.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step reveal-on-scroll delay-5">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card stall-paper">
+            <div class="step-header">
+              <span class="step-icon">🏆</span>
+              <h3>Results</h3>
+            </div>
+            <ul>
+              <li>Final selected members will be announced and onboarded to IIC.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="wooden-board-wrapper reveal-on-scroll">
+        <div class="wooden-board">
+          <div class="nail nail-left"></div>
+          <h2 class="board-text">ABOUT IIC</h2>
+          <div class="nail nail-right"></div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <!-- 1. What is IIC -->
+        <div class="about-card pinned-paper intro-card col-span-2 reveal-on-scroll delay-1">
+          <div class="paper-pin pin-top-center"></div>
+          <p class="intro-text">
+            <strong>Innovation & Incubation Cell (IIC)</strong> is a student-driven community focused on creativity,
+            innovation, and execution.<br>We build events, ideas, and experiences that help students explore skills
+            beyond academics.
+          </p>
+        </div>
+
+        <!-- 2. Vision -->
+        <div class="about-card pinned-paper vision-card reveal-on-scroll delay-2">
+          <div class="paper-pin pin-top-left"></div>
+          <h3>Vision</h3>
+          <p>
+            To create a campus culture where students innovate, collaborate, and turn ideas into real-world experiences.
+          </p>
+        </div>
+
+        <!-- 3. Mission -->
+        <div class="about-card pinned-paper mission-card reveal-on-scroll delay-3">
+          <div class="paper-pin pin-top-right"></div>
+          <h3>Mission</h3>
+          <ul class="mission-list">
+            <li>Encourage creativity & innovation</li>
+            <li>Organize impactful events</li>
+            <li>Build strong student teams</li>
+            <li>Provide hands-on experience</li>
+            <li>Promote leadership & collaboration</li>
+          </ul>
+        </div>
+
+        <!-- 4. Perks -->
+        <div class="about-card pinned-paper perks-wrapper col-span-2 reveal-on-scroll delay-4">
+          <div class="paper-pin pin-top-center"></div>
+          <h3>Perks of Joining IIC</h3>
+          <div class="perks-grid">
+            <div class="perk-item">
+              <span class="perk-icon">🎪</span>
+              <span>Work on real college events</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">💼</span>
+              <span>Build strong portfolio</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🤝</span>
+              <span>Networking opportunities</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">👑</span>
+              <span>Team leadership roles</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🏆</span>
+              <span>Certificates & recognition</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🤹</span>
+              <span>Learn multiple skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER / CTA SECTION -->
+  <!-- REGISTER / CTA SECTION -->
+  <section id="register" class="cta section-pad reveal-on-scroll">
+    <div class="container">
+      <div class="cta-box stall-paper">
+        <h2 class="section-title">Ready for the Show?</h2>
+        <p>Grab your VIP pass to the IIC Open Trials. Step into the spotlight.</p>
+        <a href="/register.html" class="btn-primary animate-hover btn-large">Claim Your Ticket</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 IIC Open Trials. The Grand Carnival Awaits.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

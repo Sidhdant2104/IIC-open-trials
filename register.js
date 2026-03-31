@@ -3,7 +3,7 @@
    ========================================= */
 
 // NOTE: Replace this with your Google Apps Script Web App URL
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyY6O54pbxQy7-4jTHLvFjUDuXODGiEOYEh1J8Vxn1tL5m5YyPkh1FKoeELB72cHYOR/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyk-lnkuRBGkyverGRCKzGBjr2jtGsb-kTQg37Y0TozaB0cNtoVgCfdZsy5fw3ILELk/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
 

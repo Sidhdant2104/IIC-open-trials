@@ -698,6 +698,49 @@ ul {
   border: 1px solid #D64545;
 }
 
+.badge-mode {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 5;
+}
+
+.mode-online {
+  background-color: #E8F0FA;
+  color: #2D74DA;
+  border: 1px solid #B6D4F5;
+}
+
+.mode-offline {
+  background-color: #FAEAEA;
+  color: #D95B5B;
+  border: 1px solid #F5B6B6;
+}
+
+.event-dates {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.event-dates p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.event-dates strong {
+  font-weight: 600;
+  color: var(--color-red);
+}
+
 .event-card h3 {
   font-family: var(--font-heading);
   font-size: 1.8rem;

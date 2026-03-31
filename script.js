@@ -105,4 +105,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  // --- Countdown Timer ---
+  const countdownWrapper = document.getElementById('countdown-wrapper');
+  const daysEl = document.getElementById('cd-days');
+  const hoursEl = document.getElementById('cd-hours');
+  const minsEl = document.getElementById('cd-mins');
+  const secsEl = document.getElementById('cd-secs');
+
+  // Deadline: April 4, 2026 11:59 PM IST (UTC+5:30)
+  const deadline = new Date("2026-04-04T23:59:00+05:30").getTime();
+
+  function updateDigit(el, value) {
+    const formatted = value < 10 ? '0' + value : value.toString();
+    if (el && el.innerText !== formatted) {
+      el.classList.remove('animate-flip');
+      void el.offsetWidth; // trigger reflow
+      el.classList.add('animate-flip');
+      el.innerText = formatted;
+    }
+  }
+
+  function disableApplyButtons() {
+    const applyButtons = document.querySelectorAll('a[href="/register.html"]');
+    applyButtons.forEach(btn => {
+      btn.classList.add('btn-disabled');
+      btn.title = "Registration Closed";
+      btn.addEventListener('click', (e) => e.preventDefault());
+    });
+  }
+
+  function updateCountdown() {
+    if (!countdownWrapper) return;
+    
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      countdownWrapper.innerHTML = '<div class="countdown-message">Registrations Closed</div>';
+      disableApplyButtons();
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    updateDigit(daysEl, days);
+    updateDigit(hoursEl, hours);
+    updateDigit(minsEl, minutes);
+    updateDigit(secsEl, seconds);
+  }
+
+  let countdownInterval;
+  if (countdownWrapper && typeof updateCountdown === "function") {
+    countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Call immediately
+  }
+
 });

@@ -2,8 +2,10 @@
    PREMIUM REGISTER PAGE LOGIC 
    ========================================= */
 
-// NOTE: Replace this with your Google Apps Script Web App URL
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx-Ty8biTssfEax-87hPIofg8BLQ_urvLQ4aLGJ7xSd44f4B0mH_52sbn8-3qWj1iYV/exec";
+// Supabase Configuration 
+// Assuming table name is "registrations" - change the URL if it's different!
+const SUPABASE_URL = "https://xrgxzrgmurjxbhwpjkqk.supabase.co/rest/v1/registrations";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhyZ3h6cmdtdXJqeGJod3Bqa3FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ5NDM2NjAsImV4cCI6MjA5MDUxOTY2MH0.Q5STg_gmxLNEwYkU-xq12oCABJ2ps451CDM2ZsBOO9w";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -67,14 +69,23 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       console.log("Sending payload to Webhook:", payload);
 
-      await fetch(WEBHOOK_URL, {
+      const response = await fetch(SUPABASE_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
         body: JSON.stringify(payload)
       });
 
-      console.log("Webhook request completed.");
+      if (!response.ok) {
+        console.error("Supabase insert failed:", await response.text());
+        throw new Error("Database error");
+      }
+
+      console.log("Registration safely secured in Supabase.");
 
       document.getElementById('form-card').classList.add('hidden');
       document.getElementById('success-card').classList.remove('hidden');

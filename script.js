@@ -117,32 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateDigit(el, value) {
     const formatted = value < 10 ? '0' + value : value.toString();
-    if (!el) return;
-
-    const currentSpan = el.querySelector('.current');
-    
-    if (currentSpan && currentSpan.innerText !== formatted) {
-      const nextSpan = document.createElement('span');
-      nextSpan.classList.add('next');
-      nextSpan.innerText = formatted;
-      el.appendChild(nextSpan);
-      
-      // trigger reflow
-      void nextSpan.offsetWidth;
-      
-      currentSpan.classList.remove('current');
-      currentSpan.classList.add('slide-out');
-      
-      nextSpan.classList.remove('next');
-      nextSpan.classList.add('slide-in');
-      
-      setTimeout(() => {
-        if (el.contains(currentSpan)) el.removeChild(currentSpan);
-        nextSpan.classList.remove('slide-in');
-        nextSpan.classList.add('current');
-      }, 300); // smooth 0.3s ease
-    } else if (!currentSpan) {
-      el.innerHTML = `<span class="current">${formatted}</span>`;
+    if (el && el.innerText !== formatted) {
+      el.classList.remove('animate-flip');
+      void el.offsetWidth; // trigger reflow
+      el.classList.add('animate-flip');
+      el.innerText = formatted;
     }
   }
 

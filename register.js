@@ -3,7 +3,7 @@
    ========================================= */
 
 // NOTE: Replace this with your Google Apps Script Web App URL
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyk-lnkuRBGkyverGRCKzGBjr2jtGsb-kTQg37Y0TozaB0cNtoVgCfdZsy5fw3ILELk/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx-Ty8biTssfEax-87hPIofg8BLQ_urvLQ4aLGJ7xSd44f4B0mH_52sbn8-3qWj1iYV/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: document.getElementById('year').value,
       division: document.getElementById('division').value,
       dob: document.getElementById('dob').value,
-      teams: Array.from(selectedTeams) // script expects array and uses .join(", ")
+      team: Array.from(selectedTeams).join(", ")
     };
 
     try {

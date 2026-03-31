@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (err) {
       console.error("Webhook Error or Network Failure:", err);
-      formError.textContent = "Submission failed. Ensure webhook URL is correctly pasted.";
+      formError.textContent = "Something went wrong. Please try again later.";
       formError.classList.remove('hidden');
       btnSubmitMain.disabled = false;
       btnSubmitMain.querySelector('.btn-text').textContent = "Register for IIC Open Trials";

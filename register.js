@@ -7,7 +7,7 @@ const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyk-lnkuRBGkyverGRC
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const form = document.getElementById('standalone-register-form');
+  const form = document.getElementById('registerForm');
   const btnSubmitMain = document.getElementById('btn-submit-main');
   const formError = document.getElementById('form-error');
 
@@ -65,31 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      // NOTE: Removed "missing URL" error override block as requested.
-      // Fetch will automatically jump to catch block if WEBHOOK_URL is invalid/empty.
-
       console.log("Sending payload to Webhook:", payload);
 
-      const response = await fetch(WEBHOOK_URL, {
+      await fetch(WEBHOOK_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
-      console.log("Webhook Response:", result);
+      console.log("Webhook request completed.");
 
-      if (result.success === true) {
-        document.getElementById('form-card').classList.add('hidden');
-        document.getElementById('success-card').classList.remove('hidden');
-
-        // Just show success card continuously as requested
-      } else {
-        console.error("Webhook rejected submission:", result);
-        throw new Error(result.message || "Failed to submit payload.");
-      }
+      document.getElementById('form-card').classList.add('hidden');
+      document.getElementById('success-card').classList.remove('hidden');
     } catch (err) {
-      console.error("Webhook Error or Network Failure:", err);
+      console.error("Network Failure:", err);
       formError.textContent = "Something went wrong. Please try again later.";
       formError.classList.remove('hidden');
       btnSubmitMain.disabled = false;

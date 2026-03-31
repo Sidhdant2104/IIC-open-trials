@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateDigit(el, value) {
     const formatted = value < 10 ? '0' + value : value.toString();
     if (el && el.innerText !== formatted) {
-      el.classList.remove('animate-flip');
+      el.classList.remove('animate-fade');
       void el.offsetWidth; // trigger reflow
-      el.classList.add('animate-flip');
+      el.classList.add('animate-fade');
       el.innerText = formatted;
     }
   }

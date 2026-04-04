@@ -15,6 +15,25 @@
 </head>
 
 <body class="register-page">
+  <script>
+    const deadline = new Date("2026-04-04T23:59:00+05:30");
+
+    function checkDeadline() {
+      const now = new Date();
+
+      if (now > deadline) {
+        const form = document.querySelector("form");
+        const closedMsg = document.getElementById("registrationClosed");
+        const submitBtn = document.querySelector("button[type='submit']");
+
+        if (form) form.style.display = "none";
+        if (submitBtn) submitBtn.disabled = true;
+        if (closedMsg) closedMsg.style.display = "block";
+      }
+    }
+
+    checkDeadline();
+  </script>
 
   <!-- Minimal Nav -->
   <nav class="navbar scrolled">
